@@ -1,0 +1,38 @@
+# Vivado / xsim
+xsim.dir/
+xsim_work/
+*.jou
+*.log
+!sim/logs/simulate.log
+*.pb
+*.wdb
+!sim/waves/top_behav.wdb
+.Xil/
+webtalk*
+vivado*.str
+vivado_*.backup.jou
+vivado_*.backup.log
+
+# Questa/ModelSim
+work/
+transcript
+vsim.wlf
+*.wlf
+
+# VCS
+csrc/
+simv*
+*.vpd
+*.vdb
+ucli.key
+DVEfiles/
+
+# Xcelium
+xrun.log
+xrun.history
+xcelium.d/
+INCA_libs/
+
+# OS/editor cruft
+.DS_Store
+*.swp
