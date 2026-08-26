@@ -1,0 +1,1089 @@
+Time resolution is 1 ps
+UVM_INFO D:/Downloads/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test axi_base_test...
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_master.sv(29) @ 0: uvm_test_top.env.master [master] vif has been found in ConfigDB.
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_slave.sv(27) @ 0: uvm_test_top.env.slave [slave] vif has been found in ConfigDB.
+UVM_INFO D:/Downloads/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+---------------------------------------------------------------
+Name                       Type                     Size  Value
+---------------------------------------------------------------
+uvm_test_top               axi_base_test            -     @343 
+  env                      axi_env                  -     @375 
+    master                 axi_master               -     @384 
+      ap                   uvm_analysis_port        -     @737 
+      drv                  axi_m_driver             -     @415 
+        rsp_port           uvm_analysis_port        -     @434 
+        seq_item_port      uvm_seq_item_pull_port   -     @424 
+        seq_item_port2     uvm_seq_item_pull_port   -     @444 
+      mon                  axi_m_monitor            -     @454 
+        ap                 uvm_analysis_port        -     @747 
+      r_seqr               uvm_sequencer            -     @600 
+        rsp_export         uvm_analysis_export      -     @609 
+        seq_item_export    uvm_seq_item_pull_imp    -     @727 
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+      w_seqr               uvm_sequencer            -     @463 
+        rsp_export         uvm_analysis_export      -     @472 
+        seq_item_export    uvm_seq_item_pull_imp    -     @590 
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+    scb                    axi_scoreboard           -     @402 
+      m_ap_imp             uvm_analysis_imp_master  -     @767 
+      s_ap_imp             uvm_analysis_imp_slave   -     @777 
+    slave                  axi_slave                -     @393 
+      ap                   uvm_analysis_port        -     @829 
+      drv                  axi_s_driver             -     @791 
+        rsp_port           uvm_analysis_port        -     @810 
+        seq_item_port      uvm_seq_item_pull_port   -     @800 
+      mon                  axi_s_monitor            -     @820 
+        ap                 uvm_analysis_port        -     @847 
+---------------------------------------------------------------
+
+UVM_INFO D:/Downloads/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 0: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @876                                 
+  begin_time                   time               64    0                                    
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd1                                  
+  Addr                         integral           8     'ha2                                 
+  Data                         dynamic array      64    00100010101110110000100111011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 15 ns Started: 15 ns Scope: /top/intf File: D:/Downloads/xilinx/axi/axi.srcs/sources_1/imports/AXI-main/axi_interface.sv Line:109
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd1                             
+  Addr          integral           8     'ha2                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd8                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 200000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @930                                 
+  begin_time                   time               64    200000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd257                                
+  Addr                         integral           8     'hac                                 
+  Data                         dynamic array      512   00100010101111100100101001111000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd0                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 215000: uvm_test_top.env.scb [SCB] ID 1: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @876                                 
+  begin_time                   time               64    0                                    
+  end_time                     time               64    215000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd1                                  
+  Addr                         integral           8     'ha2                                 
+  Data                         dynamic array      64    00100010101110110000100111011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd257                           
+  Addr          integral           8     'hac                            
+  Data          dynamic array      512   00000000000000000000000000000000
+  Burst Size    integral           3     'd2                             
+  Burst Length  integral           4     'd0                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 225000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @939                                 
+  begin_time                   time               64    225000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd2                                  
+  Addr                         integral           8     'hf4                                 
+  Data                         dynamic array      64    00100010110101010000100001011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd2                             
+  Addr          integral           8     'hf4                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd2                             
+  Burst Length  integral           4     'd2                             
+  Burst Type    B_TYPE             4     FIXED                           
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 325000: uvm_test_top.env.scb [SCB] ID 2: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @939                                 
+  begin_time                   time               64    225000                               
+  end_time                     time               64    325000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd2                                  
+  Addr                         integral           8     'hf4                                 
+  Data                         dynamic array      64    00100010110101010000100001011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 335000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @963                                 
+  begin_time                   time               64    335000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd3                                  
+  Addr                         integral           8     'h35                                 
+  Data                         dynamic array      56    00100010101110110000110100111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd7                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd3                             
+  Addr          integral           8     'h35                            
+  Data          dynamic array      56    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd7                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 535000: uvm_test_top.env.scb [SCB] ID 3: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @963                                 
+  begin_time                   time               64    335000                               
+  end_time                     time               64    535000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd3                                  
+  Addr                         integral           8     'h35                                 
+  Data                         dynamic array      56    00100010101110110000110100111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd7                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 545000: uvm_test_top.env.scb [SCB] ID 257: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @930                                 
+  begin_time                   time               64    200000                               
+  end_time                     time               64    545000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd257                                
+  Addr                         integral           8     'hac                                 
+  Data                         dynamic array      512   00100010101111100100101001111000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd0                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 545000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @979                                 
+  begin_time                   time               64    545000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd4                                  
+  Addr                         integral           8     'h54                                 
+  Data                         dynamic array      128   00100010101110101111110101011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 555000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @988                                 
+  begin_time                   time               64    555000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd258                                
+  Addr                         integral           8     'hf8                                 
+  Data                         dynamic array      64    00100010110010100001100101000000     
+  Burst Size                   integral           3     'd3                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd4                             
+  Addr          integral           8     'h54                            
+  Data          dynamic array      128   00000000000000000000000000000000
+  Burst Size    integral           3     'd2                             
+  Burst Length  integral           4     'd4                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd258                           
+  Addr          integral           8     'hf8                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd3                             
+  Burst Length  integral           4     'd1                             
+  Burst Type    B_TYPE             4     FIXED                           
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 605000: uvm_test_top.env.scb [SCB] ID 258: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @988                                 
+  begin_time                   time               64    555000                               
+  end_time                     time               64    605000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd258                                
+  Addr                         integral           8     'hf8                                 
+  Data                         dynamic array      64    00100010110010100001100101000000     
+  Burst Size                   integral           3     'd3                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 615000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1012                                
+  begin_time                   time               64    615000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd259                                
+  Addr                         integral           8     'h69                                 
+  Data                         dynamic array      32    00100010110101110000010111011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd259                           
+  Addr          integral           8     'h69                            
+  Data          dynamic array      32    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd4                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 685000: uvm_test_top.env.scb [SCB] ID 4: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @979                                 
+  begin_time                   time               64    545000                               
+  end_time                     time               64    685000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd4                                  
+  Addr                         integral           8     'h54                                 
+  Data                         dynamic array      128   00100010101110101111110101011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 695000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1028                                
+  begin_time                   time               64    695000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd5                                  
+  Addr                         integral           8     'ha                                  
+  Data                         dynamic array      32    00100010110101010001100011011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 725000: uvm_test_top.env.scb [SCB] ID 259: PASSED
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd5                             
+  Addr          integral           8     'ha                             
+  Data          dynamic array      32    00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd2                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1012                                
+  begin_time                   time               64    615000                               
+  end_time                     time               64    725000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd259                                
+  Addr                         integral           8     'h69                                 
+  Data                         dynamic array      32    00100010110101110000010111011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 735000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1044                                
+  begin_time                   time               64    735000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd260                                
+  Addr                         integral           8     'hb3                                 
+  Data                         dynamic array      8     00100010110010100010010000110000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd260                           
+  Addr          integral           8     'hb3                            
+  Data          dynamic array      8     00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd1                             
+  Burst Type    B_TYPE             4     FIXED                           
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 785000: uvm_test_top.env.scb [SCB] ID 260: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1044                                
+  begin_time                   time               64    735000                               
+  end_time                     time               64    785000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd260                                
+  Addr                         integral           8     'hb3                                 
+  Data                         dynamic array      8     00100010110010100010010000110000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 795000: uvm_test_top.env.scb [SCB] ID 5: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1028                                
+  begin_time                   time               64    695000                               
+  end_time                     time               64    795000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd5                                  
+  Addr                         integral           8     'ha                                  
+  Data                         dynamic array      32    00100010110101010001100011011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 795000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1060                                
+  begin_time                   time               64    795000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd261                                
+  Addr                         integral           8     'h80                                 
+  Data                         dynamic array      128   00100010110010100010100000011000     
+  Burst Size                   integral           3     'd4                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 805000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1068                                
+  begin_time                   time               64    805000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd6                                  
+  Addr                         integral           8     'h28                                 
+  Data                         dynamic array      64    00100010110101010010000001011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd261                           
+  Addr          integral           8     'h80                            
+  Data          dynamic array      128   00000000000000000000000000000000
+  Burst Size    integral           3     'd4                             
+  Burst Length  integral           4     'd1                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd6                             
+  Addr          integral           8     'h28                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd2                             
+  Burst Length  integral           4     'd2                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 845000: uvm_test_top.env.scb [SCB] ID 261: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1060                                
+  begin_time                   time               64    795000                               
+  end_time                     time               64    845000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd261                                
+  Addr                         integral           8     'h80                                 
+  Data                         dynamic array      128   00100010110010100010100000011000     
+  Burst Size                   integral           3     'd4                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 855000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1092                                
+  begin_time                   time               64    855000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd262                                
+  Addr                         integral           8     'h87                                 
+  Data                         dynamic array      72    00100010110000110010010011011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd9                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd262                           
+  Addr          integral           8     'h87                            
+  Data          dynamic array      72    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd9                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 905000: uvm_test_top.env.scb [SCB] ID 6: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1068                                
+  begin_time                   time               64    805000                               
+  end_time                     time               64    905000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd6                                  
+  Addr                         integral           8     'h28                                 
+  Data                         dynamic array      64    00100010110101010010000001011000     
+  Burst Size                   integral           3     'd2                                  
+  Burst Length                 integral           4     'd2                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 915000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1108                                
+  begin_time                   time               64    915000                               
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd7                                  
+  Addr                         integral           8     'hf6                                 
+  Data                         dynamic array      256   00100010101111101000111100111000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd0                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd7                             
+  Addr          integral           8     'hf6                            
+  Data          dynamic array      256   00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd0                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1065000: uvm_test_top.env.scb [SCB] ID 262: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1092                                
+  begin_time                   time               64    855000                               
+  end_time                     time               64    1065000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd262                                
+  Addr                         integral           8     'h87                                 
+  Data                         dynamic array      72    00100010110000110010010011011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd9                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1075000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1124                                
+  begin_time                   time               64    1075000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd263                                
+  Addr                         integral           8     'h96                                 
+  Data                         dynamic array      176   00100010110010000100111110011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd11                                 
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd263                           
+  Addr          integral           8     'h96                            
+  Data          dynamic array      176   00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd11                            
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 1295000: uvm_test_top.env.scb [SCB] ID 7: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1108                                
+  begin_time                   time               64    915000                               
+  end_time                     time               64    1295000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd7                                  
+  Addr                         integral           8     'hf6                                 
+  Data                         dynamic array      256   00100010101111101000111100111000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd0                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 1305000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1140                                
+  begin_time                   time               64    1305000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd8                                  
+  Addr                         integral           8     'h1a                                 
+  Data                         dynamic array      8     00100010110010100011100111000000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1325000: uvm_test_top.env.scb [SCB] ID 263: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1124                                
+  begin_time                   time               64    1075000                              
+  end_time                     time               64    1325000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd263                                
+  Addr                         integral           8     'h96                                 
+  Data                         dynamic array      176   00100010110010000100111110011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd11                                 
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd8                             
+  Addr          integral           8     'h1a                            
+  Data          dynamic array      8     00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd1                             
+  Burst Type    B_TYPE             4     FIXED                           
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1335000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1148                                
+  begin_time                   time               64    1335000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd264                                
+  Addr                         integral           8     'hfa                                 
+  Data                         dynamic array      128   00100010101110110001010001011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd264                           
+  Addr          integral           8     'hfa                            
+  Data          dynamic array      128   00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd8                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 1385000: uvm_test_top.env.scb [SCB] ID 8: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1140                                
+  begin_time                   time               64    1305000                              
+  end_time                     time               64    1385000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd8                                  
+  Addr                         integral           8     'h1a                                 
+  Data                         dynamic array      8     00100010110010100011100111000000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 1395000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1172                                
+  begin_time                   time               64    1395000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd9                                  
+  Addr                         integral           8     'h63                                 
+  Data                         dynamic array      64    00100010101110110001011000111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd9                             
+  Addr          integral           8     'h63                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd8                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1525000: uvm_test_top.env.scb [SCB] ID 264: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1148                                
+  begin_time                   time               64    1335000                              
+  end_time                     time               64    1525000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd264                                
+  Addr                         integral           8     'hfa                                 
+  Data                         dynamic array      128   00100010101110110001010001011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1535000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1188                                
+  begin_time                   time               64    1535000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd265                                
+  Addr                         integral           8     'hb7                                 
+  Data                         dynamic array      32    00100010110101110001110100011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd265                           
+  Addr          integral           8     'hb7                            
+  Data          dynamic array      32    00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd4                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 1615000: uvm_test_top.env.scb [SCB] ID 9: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1172                                
+  begin_time                   time               64    1395000                              
+  end_time                     time               64    1615000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd9                                  
+  Addr                         integral           8     'h63                                 
+  Data                         dynamic array      64    00100010101110110001011000111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd8                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 1625000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1204                                
+  begin_time                   time               64    1625000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd10                                 
+  Addr                         integral           8     'h45                                 
+  Data                         dynamic array      8     00100010110010100100100100111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1645000: uvm_test_top.env.scb [SCB] ID 265: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1188                                
+  begin_time                   time               64    1535000                              
+  end_time                     time               64    1645000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd265                                
+  Addr                         integral           8     'hb7                                 
+  Data                         dynamic array      32    00100010110101110001110100011000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd10                            
+  Addr          integral           8     'h45                            
+  Data          dynamic array      8     00000000000000000000000000000000
+  Burst Size    integral           3     'd0                             
+  Burst Length  integral           4     'd1                             
+  Burst Type    B_TYPE             4     FIXED                           
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1655000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1212                                
+  begin_time                   time               64    1655000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd266                                
+  Addr                         integral           8     'ha8                                 
+  Data                         dynamic array      64    00100010110101110010001011011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd266                           
+  Addr          integral           8     'ha8                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd4                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(50) @ 1705000: uvm_test_top.env.scb [SCB] ID 10: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1204                                
+  begin_time                   time               64    1625000                              
+  end_time                     time               64    1705000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd10                                 
+  Addr                         integral           8     'h45                                 
+  Data                         dynamic array      8     00100010110010100100100100111000     
+  Burst Size                   integral           3     'd0                                  
+  Burst Length                 integral           4     'd1                                  
+  Burst Type                   B_TYPE             4     FIXED                                
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(60) @ 1715000: uvm_test_top.env.master.drv [drv] Write Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1236                                
+  begin_time                   time               64    1715000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     wr_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.w_seqr.wr_seq
+  sequencer                    string             30    uvm_test_top.env.master.w_seqr       
+  ID                           integral           9     'd11                                 
+  Addr                         integral           8     'hb2                                 
+  Data                         dynamic array      256   00100010101111101110010000111000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd0                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_wtrans        uvm_sequence_item  -     @839                            
+  ID            integral           9     'd11                            
+  Addr          integral           8     'hb2                            
+  Data          dynamic array      256   00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd0                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1765000: uvm_test_top.env.scb [SCB] ID 266: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1212                                
+  begin_time                   time               64    1655000                              
+  end_time                     time               64    1765000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd266                                
+  Addr                         integral           8     'ha8                                 
+  Data                         dynamic array      64    00100010110101110010001011011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1775000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1252                                
+  begin_time                   time               64    1775000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd267                                
+  Addr                         integral           8     'h7c                                 
+  Data                         dynamic array      64    00100010110101110010011010011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd267                           
+  Addr          integral           8     'h7c                            
+  Data          dynamic array      64    00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd4                             
+  Burst Type    B_TYPE             4     WRAP                            
+-------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_scoreboard.sv(62) @ 1885000: uvm_test_top.env.scb [SCB] ID 267: PASSED
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1252                                
+  begin_time                   time               64    1775000                              
+  end_time                     time               64    1885000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd267                                
+  Addr                         integral           8     'h7c                                 
+  Data                         dynamic array      64    00100010110101110010011010011000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd4                                  
+  Burst Type                   B_TYPE             4     WRAP                                 
+---------------------------------------------------------------------------------------------
+UVM_INFO ../../../../axi.srcs/sources_1/imports/AXI-main/axi_m_driver.sv(75) @ 1895000: uvm_test_top.env.master.drv [drv] Read Packet received in master driver
+---------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                
+---------------------------------------------------------------------------------------------
+trans                          uvm_sequence_item  -     @1268                                
+  begin_time                   time               64    1895000                              
+  depth                        int                32    'd2                                  
+  parent sequence (name)       string             6     rd_seq                               
+  parent sequence (full name)  string             37    uvm_test_top.env.master.r_seqr.rd_seq
+  sequencer                    string             30    uvm_test_top.env.master.r_seqr       
+  ID                           integral           9     'd268                                
+  Addr                         integral           8     'h64                                 
+  Data                         dynamic array      80    00100010110001100010111000001000     
+  Burst Size                   integral           3     'd1                                  
+  Burst Length                 integral           4     'd5                                  
+  Burst Type                   B_TYPE             4     INCR                                 
+---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Name            Type               Size  Value                           
+-------------------------------------------------------------------------
+s_rtrans        uvm_sequence_item  -     @843                            
+  ID            integral           9     'd268                           
+  Addr          integral           8     'h64                            
+  Data          dynamic array      80    00000000000000000000000000000000
+  Burst Size    integral           3     'd1                             
+  Burst Length  integral           4     'd5                             
+  Burst Type    B_TYPE             4     INCR                            
+-------------------------------------------------------------------------
